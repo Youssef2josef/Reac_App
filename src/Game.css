@@ -1,0 +1,127 @@
+/* Import Bootstrap CSS */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+:root {
+    --background-color: cornflowerblue ;
+    --board-background-color: bisque;
+    --board-border-color:burlywood ;
+    --panel-background-color: lightgoldenrodyellow ;
+    --panel-border-color: burlywood;
+}
+body{
+    background-color: var(--background-color);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.panel{
+    position: absolute;
+    background-color: var(--panel-background-color);
+    border: 8px solid var(--panel-border-color);
+    -webkit-box-shadow: 7px 5px 15px 3px rgba(0,0,0,0.9);
+    box-shadow: 7px 5px 15px 3px rgba(0,0,0,0.9);
+    z-index: 1;
+}
+
+.header{
+    left: 46.5%;
+    top: 38px;
+    height: 80px;
+    width: 300px;
+    margin-left: -90px;
+    border-radius: 10%;
+}
+
+.header-text{
+    font-size: 30px;
+    font-weight: bold;
+    width: 220px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.footer{
+    left: 46.5%;
+    top: 620px;
+    height: 90px;
+    width: 350px;
+    margin-left: -110px;  
+    margin-top: -5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer button{
+    position: relative;
+    left: 50%;
+    width: 140px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 5px;
+    background-color: lightblue;
+    font-size: 20px;
+    -webkit-box-shadow: 3px 5px 10px 2px rgba(0,0,0,0.9);
+    box-shadow: 3px 5px 10px 2px rgba(0,0,0,0.9);
+    border: 5px solid chocolate;
+    font-weight: bold;
+    color: black;
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 20px;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 13%;
+    background-color: var(--board-background-color);
+    border: 8px solid burlywood;
+    border-radius: 8%;
+    -webkit-box-shadow: 7px 5px 15px 3px rgba(0,0,0,0.9);
+    box-shadow: 7px 5px 15px 3px rgba(0,0,0,0.9);
+}
+
+.gameCircle {
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.player_0{
+    background-color: white;
+}
+
+.player_1{
+    background-color: red;
+}
+
+.player_2{
+    background-color: blue;
+}
+
+
+@media screen and (max-width: 890px) {
+    .gameBoard {
+        margin-left: -200px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .header{
+        margin-left: -120px;
+    }
+    .gameBoard {
+        margin-left: -250px;
+    }
+    .footer{
+        margin-left: -140px;  
+    }
+}
